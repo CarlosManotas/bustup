@@ -1,0 +1,245 @@
+ul{
+	list-style: none;
+	padding:0;
+	li{
+		color:#333;
+		margin-bottom: .3em;
+		#seccion2 &{
+			font-style: italic;
+			color:#58595b;
+			font-weight: $bold;
+		}
+		span.icon-aceptar{
+			display: inline-flex;
+			justify-content: center;
+			align-items:center;
+			width: 25px;
+			height: 25px;
+			background: $colorred;
+			color:white;
+			border-radius:50%;
+			margin-right: 1em;
+			&:before{
+				top:0;
+			}
+		}
+	}
+}
+
+#seccion2{
+	min-height: 100vh;
+	background:#fff;
+	padding: 2em 0;
+	@include desde(web){
+		height: 100vh;
+		background:url(../img/foto1.jpg)no-repeat,#fff;
+		background-size: contain;
+		background-position: right bottom;
+	}
+	h2{
+		color:$colorblue;
+	}
+	p{
+		color:#000;
+		line-height: 1.8;
+		text-align: justify;
+		span{
+			color:$colorblue;
+			font-weight: $bold;
+		}
+	}	
+}
+#seccion3{
+	min-height: 100vh;
+	background: #455871 ;
+	padding:2em 0;
+	overflow:hidden;
+	
+	h2{
+		color:#1bbcb8;
+		font-size: 1.5em;
+		&.cabello{
+			margin-top: 3.3em;
+			color:white;
+		}
+	}
+	p{
+		color:#fff;
+		line-height: 1.8;
+		text-align: justify;
+		span{
+			color:#1bbcb8;
+			font-weight: $bold;
+		}
+	}
+	@include desde(web){
+		height: 100vh;
+		background: linear-gradient(to right,#455871 60%, #fff 60% );
+		figure{
+			padding-left: .5em;
+		}
+		h2{
+			color:#1bbcb8;
+			font-size: 1.5em;
+			&.cabello{
+				margin-top: 3.3em;
+				color:#005baa;
+				padding-left: .5em;
+			}
+		}
+	}
+	@include desde(hd){
+		background: linear-gradient(to right,#455871 57%, #fff 57% );
+	}
+}
+.h2{
+	width: 100%;
+	position: relative;
+	border-right: 30px solid transparent;
+	border-bottom: 65px solid #d32263;
+	margin-bottom: 2.5em;
+	overflow: hidden;
+	&:after,&:before{
+		position:absolute;
+		content: "";
+	}
+	&:after{
+		border-right: 60px solid transparent;
+		border-left: 30px solid transparent;
+		border-top: 40px solid darken(#d32263,15%);
+		width: 20px;
+		right: -30px;
+		bottom: -105px;
+	}
+	&:before{
+		border-right: 50px solid transparent;
+		border-left: 50px solid transparent;
+		border-top: 65px solid darken(#d32263,5%);
+		width:500px;
+		right: -420px;
+		bottom: -105px;
+		z-index: -1;
+	}
+	h2{
+		position: absolute;
+		color:#fdea08;
+		right: 1em;
+		top:-.2em;
+	}
+	p{
+		position: absolute;
+		color:white;
+		bottom:-94px;
+		right: -360px;
+		font-size: .9em;
+	}
+}
+
+#seccion4{
+	min-height: 100vh;
+	background: #fff;
+	padding:2em 0;
+	h2{
+		color:$colorblue;
+	}
+	p{
+		span{
+			color:$colorblue;
+			font-weight: $bold;
+		}
+	}
+	h3{
+		color:white;
+		span{
+			color:#d8ff01;
+		}
+	}
+	@include desde(web){
+		height: 100vh;
+	}
+	figcaption{
+		color:$colorblue;
+		font-weight: $bold;
+	}
+	
+}
+.flex-around{
+	li{
+		color:white;
+		margin-bottom: .3em;
+		font-weight: $bold;
+		#seccion2 &{
+			font-style: italic;
+			color:#58595b;
+			font-weight: $bold;
+		}
+		span.icon-aceptar{
+			display: inline-flex;
+			justify-content: center;
+			align-items:center;
+			width: 25px;
+			height: 25px;
+			background: $colorred;
+			color:white;
+			border-radius:50%;
+			margin-right: 1em;
+			&:before{
+				top:0;
+			}
+		}
+	}
+}
+#seccion6{
+	padding: 2em 0;
+	background-color:#a0b0bd;
+	min-height:100%;
+	color:white;
+	.ptop{
+		padding-top: 3em;
+	}
+	h2,h3,li{
+		color:#d8ff01;
+	}
+	h3{
+		font-style: italic;
+	}
+	@include desde(web){
+		background:url(../img/hombremegusta.png)no-repeat, #a0b0bd;
+		background-position: right bottom;
+		height: 100vh;
+	}
+	@include desde(hd){
+		background-size: contain;
+	}
+
+}
+#seccion5{
+	background: $colorblue;
+	h2{
+		color:white;
+	}
+	form{
+		position:relative;
+		top:0;
+		max-width: 100%;
+		background: none;
+		box-shadow:none;
+		height: auto;
+		overflow:visible;
+	}
+	.input-submit{
+		width: 100%;
+		max-width: 250px;
+	}
+}
+
+.btn-gracias{
+	width:100%;
+	max-width:320px;
+	border-radius: 15px;
+	background: linear-gradient(to bottom, #52d81a 0%,#207324 100%);
+	color:white;
+	border: 2px solid rgba(255,255,255,.3);
+	font-size:1.2em;
+	margin-top: .8em;
+}
