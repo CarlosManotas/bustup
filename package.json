@@ -1,7 +1,7 @@
 {
-  "name": "regrow",
+  "name": "bustup",
   "version": "0.0.1",
-  "description": "Producto de la caida del cabello de venta directa",
+  "description": "Producto para el volumen de busto de venta directa",
   "author": "Carlos Manotas <carlosmanotas@hotmail.com>",
   "contributors": [
     {
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/CarlosManotas/regrow"
+    "url": "https://github.com/CarlosManotas/bustup"
   },
   "bugs": {
-    "url": "https://github.com/CarlosManotas/regrow/issues"
+    "url": "https://github.com/CarlosManotas/bustup/issues"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
