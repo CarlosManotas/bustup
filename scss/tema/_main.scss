@@ -1,13 +1,13 @@
 ul{
 	list-style: none;
 	padding:0;
+	background: $colorblue;
+	height: 68px;
 	li{
-		color:#333;
-		margin-bottom: .3em;
+		color:#fff;
+		margin-top: 0;
 		#seccion2 &{
-			font-style: italic;
-			color:#58595b;
-			font-weight: $bold;
+			color:#fff;
 		}
 		span.icon-aceptar{
 			display: inline-flex;
@@ -15,29 +15,58 @@ ul{
 			align-items:center;
 			width: 25px;
 			height: 25px;
-			background: $colorred;
-			color:white;
+			background: #fff;
+			color:$colorblue;
 			border-radius:50%;
-			margin-right: 1em;
+			margin-right: .5em;
 			&:before{
 				top:0;
 			}
 		}
 	}
 }
-
+	
 #seccion2{
-	min-height: 100vh;
 	background:#fff;
-	padding: 2em 0;
-	@include desde(web){
-		height: 100vh;
-		background:url(../img/foto1.jpg)no-repeat,#fff;
-		background-size: contain;
-		background-position: right bottom;
-	}
+	padding: 0;
 	h2{
-		color:$colorblue;
+		color:#00a784;
+		text-align: center;
+		margin: 0;
+		font-size: 1.4em;
+		span{
+			color:$colorblue;
+			&.small{
+				font-size: .8em;
+			}
+		}
+	}
+	@include desde(web){
+		h2{
+			font-size: 2em;
+			font-weight: $light;
+		}
+	}
+	
+	ul{
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		margin: 0;
+		li{
+			font-size: 1em;
+			font-weight: $light;
+			text-align: center;
+			span{
+				width: 35px;
+				height: 35px;
+			}
+		}
+		@include desde(tablet){
+			li{
+				font-size: 2em;
+			}
+		}
 	}
 	p{
 		color:#000;
@@ -47,40 +76,90 @@ ul{
 			color:$colorblue;
 			font-weight: $bold;
 		}
+	}
+	h3{
+		color:$colorblue;
+		margin: .3em 0;
+	}
+	.tabla{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		width: 100%;
+		.lista{
+			margin-bottom: .5em;
+			max-width: 19.1%;
+			background: #dbdcde;
+			width: 100%;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			flex-direction: row;
+			font-size: .8em;
+			text-align: center;
+			figure{
+				padding: 2em;
+			}
+			p{
+				color:#000;
+				&.icon-aceptar{
+					color:black;
+					font-size: 2em;
+				}
+			}
+			&-verde{
+				background: #0c7f3f;
+				p.icon-aceptar{
+					color:white;
+					font-size: 2em;
+				}
+			}
+			&-vacia{
+				background: none;
+			}
+		}
 	}	
 }
 #seccion3{
-	min-height: 100vh;
-	background: #455871 ;
-	padding:2em 0;
-	overflow:hidden;
 	
 	h2{
-		color:#1bbcb8;
+		background: $colorblue;
+		text-align: center;
+		height: 68px;
+		color:#fff;
 		font-size: 1.5em;
 		&.cabello{
 			margin-top: 3.3em;
 			color:white;
 		}
 	}
+	h3{
+		margin-bottom: 0;
+		color:#00a784;
+		font-weight: $light;
+	}
 	p{
-		color:#fff;
-		line-height: 1.8;
+		color:#000;
+		line-height: 1.4;
 		text-align: justify;
+		&.colorRed{
+			color:$colorblue;
+			font-weight: $bold;
+		}
 		span{
-			color:#1bbcb8;
+			color:$colorred;
 			font-weight: $bold;
 		}
 	}
 	@include desde(web){
-		height: 100vh;
-		background: linear-gradient(to right,#455871 60%, #fff 60% );
 		figure{
 			padding-left: .5em;
 		}
 		h2{
-			color:#1bbcb8;
-			font-size: 1.5em;
+			font-size: 2em;
+			font-weight: $light;
+			margin-bottom: 0;
 			&.cabello{
 				margin-top: 3.3em;
 				color:#005baa;
@@ -88,59 +167,31 @@ ul{
 			}
 		}
 	}
-	@include desde(hd){
-		background: linear-gradient(to right,#455871 57%, #fff 57% );
-	}
 }
-.h2{
-	width: 100%;
-	position: relative;
-	border-right: 30px solid transparent;
-	border-bottom: 65px solid #d32263;
-	margin-bottom: 2.5em;
-	overflow: hidden;
-	&:after,&:before{
-		position:absolute;
-		content: "";
-	}
-	&:after{
-		border-right: 60px solid transparent;
-		border-left: 30px solid transparent;
-		border-top: 40px solid darken(#d32263,15%);
-		width: 20px;
-		right: -30px;
-		bottom: -105px;
-	}
-	&:before{
-		border-right: 50px solid transparent;
-		border-left: 50px solid transparent;
-		border-top: 65px solid darken(#d32263,5%);
-		width:500px;
-		right: -420px;
-		bottom: -105px;
-		z-index: -1;
-	}
-	h2{
-		position: absolute;
-		color:#fdea08;
-		right: 1em;
-		top:-.2em;
-	}
-	p{
-		position: absolute;
-		color:white;
-		bottom:-94px;
-		right: -360px;
-		font-size: .9em;
-	}
-}
-
 #seccion4{
 	min-height: 100vh;
 	background: #fff;
 	padding:2em 0;
+	cite{
+		margin-top: 1em;
+		margin-bottom: 1em;
+		display: block;
+	}
+	figure{
+		img{
+			width: 100%;
+		}
+	}
 	h2{
-		color:$colorblue;
+		width: 100%;
+		background: $colorblue;
+		text-align: left;
+		padding-left: 1em;
+		line-height: 2;
+		color:#fff;
+		font-size: 2em;
+		font-weight: $light;
+		margin: 0;
 	}
 	p{
 		span{
@@ -155,7 +206,6 @@ ul{
 		}
 	}
 	@include desde(web){
-		height: 100vh;
 	}
 	figcaption{
 		color:$colorblue;
@@ -190,26 +240,41 @@ ul{
 	}
 }
 #seccion6{
-	padding: 2em 0;
-	background-color:#a0b0bd;
-	min-height:100%;
-	color:white;
-	.ptop{
-		padding-top: 3em;
+	ul{
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		margin: 0;
+		width: 100%;
+		li{
+			font-size: 1em;
+			text-align: center;
+			font-weight: $light;
+			span{
+				width: 35px;
+				height: 35px;
+			}
+		}
+		@include desde(tablet){
+			li{
+				font-size: 2em;
+			}
+		}
 	}
-	h2,h3,li{
-		color:#d8ff01;
+	.ed-container{
+		background: #c2c3c6;
 	}
 	h3{
-		font-style: italic;
-	}
-	@include desde(web){
-		background:url(../img/hombremegusta.png)no-repeat, #a0b0bd;
-		background-position: right bottom;
-		height: 100vh;
-	}
-	@include desde(hd){
-		background-size: contain;
+		color:#30a4a5;
+		font-size: 1.8em;
+		text-align: center;
+		font-weight: $light;
+		span{
+			color:$colorblue;
+			&.big{
+				font-size: 1.5em;
+			}
+		}
 	}
 
 }
@@ -217,6 +282,7 @@ ul{
 	background: $colorblue;
 	h2{
 		color:white;
+		font-weight: $light;
 	}
 	form{
 		position:relative;

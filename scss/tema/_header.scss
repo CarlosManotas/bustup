@@ -1,4 +1,4 @@
-$colorblue: #2b4b96;
+$colorblue: #be1f4e;
 $colorred:#ed1c24;
 $pi :3.1416;
 body{
@@ -38,6 +38,9 @@ figure{
 	background: #fff;
 	position:fixed;
 	z-index:9999999999999;
+	[alt="logo"]{
+		fill:black;
+	}
 	svg{
 		width: 180px;
 		height: 180px;
@@ -102,24 +105,47 @@ figure{
 	width:100%;
 	max-width:350px;
 }
+.header{
+	background: url(../img/flores.png),#be1f4e;
+	h2{
+		color:white;
+		font-weight: $light;
+		display: inline-flex;
+		justify-content: center;
+		align-items:center;
+		width: 100%;
+		margin: 0;
+		margin-top: .5em;
+		font-size: 1em;
+		@include desde(movil){
+			font-size: 1.5em;
+		}
+	}
+	p{
+		color:white;
+		margin-bottom:1em;
+		font-size: .9em;
+	}
+}
 #header{
-	height: 100vh;
 	background: url(../img/header2.png),url(../img/header.jpg);
 	background-repeat: no-repeat;
 	background-size: contain ,cover;
-	background-position: bottom center ,center center;
+	background-position: bottom left ,left center;
 	@include desde(web){
-		min-height: 650px;
+		height: 512px;
 	}
-	h1{
-		color:#fff;
+	h1,figure{
+		color:#be1f4e;
 		font-size: 1.5em;
-		text-align: left;
-		font-style: italic;
+		text-align: right;
+		text-shadow: 2px 2px 3px #fff, -2px -2px 3px #fff;
 		@include desde(movil){
 			font-size: 3em;
 		}
 		@include desde(web){
+			font-weight: $light;
+			text-align: center;
 		}
 	}
 
